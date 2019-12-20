@@ -1,0 +1,950 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Videoprocessing</class>
+ <widget class="QMainWindow" name="Videoprocessing">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>762</width>
+    <height>451</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Video Processor</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="6" column="1" colspan="3">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 48, 138);</string>
+        </property>
+        <property name="text">
+         <string>Camera Index :</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="videoEdit">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 208, 245);</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="startBtn">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(255, 48, 138);</string>
+        </property>
+        <property name="text">
+         <string>Start</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="5" column="0">
+     <widget class="QGraphicsView" name="blue_view"/>
+    </item>
+    <item row="3" column="0">
+     <widget class="QGraphicsView" name="green_view"/>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="green">
+      <property name="styleSheet">
+       <string notr="true">color: rgb(115, 210, 22);</string>
+      </property>
+      <property name="text">
+       <string>GREEN</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="0">
+     <widget class="QLabel" name="title">
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 48, 138);
+font: 13pt &quot;Ubuntu&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Video Processing_ej</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="red">
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>RED</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QGraphicsView" name="red_view"/>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="blue">
+      <property name="styleSheet">
+       <string notr="true">color: rgb(48, 38, 255);</string>
+      </property>
+      <property name="text">
+       <string>BLUE</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1" rowspan="5">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 48, 138);</string>
+      </property>
+      <property name="currentIndex">
+       <number>6</number>
+      </property>
+      <widget class="QWidget" name="rgb_tab">
+       <attribute name="title">
+        <string>RGB</string>
+       </attribute>
+       <widget class="QGraphicsView" name="orig_view">
+        <property name="geometry">
+         <rect>
+          <x>69</x>
+          <y>91</y>
+          <width>100</width>
+          <height>100</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QGraphicsView" name="redC_view">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>91</y>
+          <width>100</width>
+          <height>100</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QGraphicsView" name="greenC_view">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>220</y>
+          <width>100</width>
+          <height>100</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QGraphicsView" name="blueC_view">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>220</y>
+          <width>100</width>
+          <height>100</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="title_3">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>20</y>
+          <width>321</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 75 11pt &quot;Ubuntu Condensed&quot;;
+font: 20pt &quot;Ubuntu&quot;;
+color: rgb(255, 48, 138);</string>
+        </property>
+        <property name="text">
+         <string>     Video Processing</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="orig">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>70</y>
+          <width>67</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>ORIGINAL</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="orig_2">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>70</y>
+          <width>67</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(239, 41, 41);</string>
+        </property>
+        <property name="text">
+         <string>RED</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="orig_3">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>200</y>
+          <width>67</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(78, 154, 6);</string>
+        </property>
+        <property name="text">
+         <string>GREEN</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="orig_4">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>200</y>
+          <width>67</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(48, 38, 255);</string>
+        </property>
+        <property name="text">
+         <string>BLUE</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="rec_tab">
+       <attribute name="title">
+        <string>REC</string>
+       </attribute>
+       <widget class="QGraphicsView" name="rec_view">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>60</y>
+          <width>200</width>
+          <height>200</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="rec_2">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>15</y>
+          <width>331</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 75 11pt &quot;Ubuntu Condensed&quot;;
+font: 20pt &quot;Ubuntu&quot;;
+color: rgb(255, 48, 138);</string>
+        </property>
+        <property name="text">
+         <string>     Video Processing</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="capture_path">
+        <property name="geometry">
+         <rect>
+          <x>139</x>
+          <y>270</y>
+          <width>100</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 208, 245);</string>
+        </property>
+        <property name="text">
+         <string>./photo.png</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="rec_path">
+        <property name="geometry">
+         <rect>
+          <x>139</x>
+          <y>305</y>
+          <width>100</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 208, 245);</string>
+        </property>
+        <property name="text">
+         <string>./movie.avi</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_2">
+        <property name="geometry">
+         <rect>
+          <x>35</x>
+          <y>273</y>
+          <width>111</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 48, 138);</string>
+        </property>
+        <property name="text">
+         <string>Capture Path :</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_3">
+        <property name="geometry">
+         <rect>
+          <x>35</x>
+          <y>305</y>
+          <width>111</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 48, 138);</string>
+        </property>
+        <property name="text">
+         <string>Record Path  :</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="captureBtn">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>270</y>
+          <width>71</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 48, 138);
+color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>Capture</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="recordBtn">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>305</y>
+          <width>71</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 48, 138);
+color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>Record</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="rotate_tab">
+       <attribute name="title">
+        <string>ROT</string>
+       </attribute>
+       <widget class="QGraphicsView" name="rotate_view">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>70</y>
+          <width>200</width>
+          <height>200</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="rec_3">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>20</y>
+          <width>311</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 75 20pt &quot;Ubuntu Condensed&quot;;
+font: 20pt &quot;Ubuntu&quot;;
+color: rgb(255, 48, 138);</string>
+        </property>
+        <property name="text">
+         <string>     Video Processing</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>290</y>
+          <width>254</width>
+          <height>27</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QPushButton" name="ccwBtn">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(255, 48, 138);</string>
+           </property>
+           <property name="text">
+            <string>CCW</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="autoBtn">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(255, 48, 138);</string>
+           </property>
+           <property name="text">
+            <string>AUTO</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="cwBtn">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 48, 138);
+color: rgb(255, 255, 255);
+</string>
+           </property>
+           <property name="text">
+            <string>CW</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="move_tab">
+       <attribute name="title">
+        <string>MOVE</string>
+       </attribute>
+       <widget class="QWidget" name="widget" native="true">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>18</y>
+          <width>200</width>
+          <height>200</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 208, 245);</string>
+        </property>
+        <widget class="QGraphicsView" name="move_view">
+         <property name="geometry">
+          <rect>
+           <x>80</x>
+           <y>80</y>
+           <width>50</width>
+           <height>50</height>
+          </rect>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QPushButton" name="upBtn">
+        <property name="geometry">
+         <rect>
+          <x>190</x>
+          <y>240</y>
+          <width>80</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(255, 48, 138);</string>
+        </property>
+        <property name="text">
+         <string>UP</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="down">
+        <property name="geometry">
+         <rect>
+          <x>190</x>
+          <y>310</y>
+          <width>80</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(255, 48, 138);</string>
+        </property>
+        <property name="text">
+         <string>DOWN</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>102</x>
+          <y>274</y>
+          <width>254</width>
+          <height>27</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QPushButton" name="leftBtn">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(255, 48, 138);</string>
+           </property>
+           <property name="text">
+            <string>LEFT</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="automvBtn">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 48, 138);
+background-color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>AUTO</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="rightBtn">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(255, 48, 138);</string>
+           </property>
+           <property name="text">
+            <string>RIGHT</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QLabel" name="label_4">
+        <property name="geometry">
+         <rect>
+          <x>28</x>
+          <y>226</y>
+          <width>67</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>ZOOM</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>11</x>
+          <y>251</y>
+          <width>82</width>
+          <height>81</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QPushButton" name="zoomP">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(255, 48, 138);</string>
+           </property>
+           <property name="text">
+            <string>+</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="zoomM">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(255, 48, 138);</string>
+           </property>
+           <property name="text">
+            <string>-</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="detect_tab">
+       <attribute name="title">
+        <string>DET</string>
+       </attribute>
+       <widget class="QTabWidget" name="tabWidget_2">
+        <property name="geometry">
+         <rect>
+          <x>11</x>
+          <y>24</y>
+          <width>281</width>
+          <height>321</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="currentIndex">
+         <number>2</number>
+        </property>
+        <widget class="QWidget" name="face">
+         <attribute name="title">
+          <string>FACE</string>
+         </attribute>
+         <widget class="QGraphicsView" name="faceD_view">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>70</y>
+            <width>200</width>
+            <height>200</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_5">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>24</y>
+            <width>221</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 75 20pt &quot;ori1Uni&quot;;
+</string>
+          </property>
+          <property name="text">
+           <string>FACE DETECT</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="car">
+         <attribute name="title">
+          <string>CAR</string>
+         </attribute>
+         <widget class="QGraphicsView" name="carD_view">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>70</y>
+            <width>200</width>
+            <height>200</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_6">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>24</y>
+            <width>221</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 75 20pt &quot;ori1Uni&quot;;
+</string>
+          </property>
+          <property name="text">
+           <string>CAR DETECT</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="number">
+         <attribute name="title">
+          <string>NUMBER</string>
+         </attribute>
+         <widget class="QGraphicsView" name="numD_view">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>70</y>
+            <width>200</width>
+            <height>200</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_7">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>24</y>
+            <width>251</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 75 20pt &quot;ori1Uni&quot;;
+</string>
+          </property>
+          <property name="text">
+           <string>NUMBER DETECT</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="filter_tab">
+       <attribute name="title">
+        <string>FILT</string>
+       </attribute>
+       <widget class="QLabel" name="orig_5">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>200</y>
+          <width>67</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(143, 89, 2);</string>
+        </property>
+        <property name="text">
+         <string>GRAY</string>
+        </property>
+       </widget>
+       <widget class="QGraphicsView" name="gray_view">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>220</y>
+          <width>100</width>
+          <height>100</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QGraphicsView" name="edge_view">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>220</y>
+          <width>100</width>
+          <height>100</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="orig_6">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>200</y>
+          <width>67</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+color: rgb(206, 92, 0);</string>
+        </property>
+        <property name="text">
+         <string>EDGE</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="title_4">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>20</y>
+          <width>301</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 75 20pt &quot;Ubuntu Condensed&quot;;
+font: 20pt &quot;Ubuntu&quot;;
+color: rgb(255, 48, 138);</string>
+        </property>
+        <property name="text">
+         <string>     Video Processing</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="orig_7">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>70</y>
+          <width>67</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(92, 53, 102);</string>
+        </property>
+        <property name="text">
+         <string>BLUR</string>
+        </property>
+       </widget>
+       <widget class="QGraphicsView" name="orig_view2">
+        <property name="geometry">
+         <rect>
+          <x>59</x>
+          <y>91</y>
+          <width>100</width>
+          <height>100</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="orig_8">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>70</y>
+          <width>67</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>ORIGINAL</string>
+        </property>
+       </widget>
+       <widget class="QGraphicsView" name="blur_view">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>91</y>
+          <width>100</width>
+          <height>100</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="sensor_tab">
+       <attribute name="title">
+        <string>SENSOR</string>
+       </attribute>
+       <widget class="QGraphicsView" name="sensor_view">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>30</y>
+          <width>200</width>
+          <height>200</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLCDNumber" name="sennum">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>280</y>
+          <width>100</width>
+          <height>40</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_9">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>250</y>
+          <width>161</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>jodo sensor</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tracking_tab">
+       <attribute name="title">
+        <string>TRACKING</string>
+       </attribute>
+       <widget class="QGraphicsView" name="track_view">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>20</y>
+          <width>200</width>
+          <height>200</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QGraphicsView" name="trackC_view">
+        <property name="geometry">
+         <rect>
+          <x>228</x>
+          <y>243</y>
+          <width>120</width>
+          <height>91</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_8">
+        <property name="geometry">
+         <rect>
+          <x>252</x>
+          <y>222</y>
+          <width>101</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>original video</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
